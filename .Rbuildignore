@@ -6,3 +6,6 @@
 ^.Rhistory$
 ^.Rproj.user$
 ^\.git$
+^\.github$
+^codecov\.yml$
+^README\.Rmd$
