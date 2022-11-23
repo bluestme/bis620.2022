@@ -32,8 +32,3 @@ hello <- function(name = NULL, invisible = FALSE) {
     return(ret)
   }
 }
-
-byebye <- function()
-{
-  print("byebye!")
-}
