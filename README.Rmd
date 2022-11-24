@@ -34,4 +34,21 @@ You can install the development version of bis620.2022 from [GitHub](https://git
 # install.packages("devtools")
 devtools::install_github("bluestme/bis620.2022")
 ```
+## Usage
 
+We first display the usage of plot
+
+```{r}
+library(bis620.2022)
+data("ukb_accel")
+p <- ukb_accel[1:100, ]
+spectral <- spectral_signature(p, take_log = TRUE)
+accel_plot(spectral)
+```
+
+We then display the usage of signature
+
+```{r}
+b <- spectral_signature(p)
+head(b)
+```
