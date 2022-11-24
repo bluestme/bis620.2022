@@ -6,9 +6,20 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/bluestme/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/bluestme/bis620.2022/actions/workflows/R-CMD-check.yaml)
+[![codecov](https://codecov.io/gh/bluestme/bis620.2022/branch/main/graph/badge.svg?token=LWLNP38CUE)](https://codecov.io/gh/bluestme/bis620.2022)
+[![test-coverage-check](https://github.com/bluestme/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/bluestme/bis620.2022/actions/workflows/test-coverage.yaml)
+[![lint](https://github.com/bluestme/bis620.2022/actions/workflows/lint.yaml/badge.svg)](https://github.com/bluestme/bis620.2022/actions/workflows/lint.yaml)
 <!-- badges: end -->
 
-The goal of bis620.2022 is to …
+The goal of bis620.2022 is to analyze the Accelerometry Data. It
+contains the dataset of a toy accelerometry dataset from UKBiobank where
+x is an object inherited from data.frame. It is assumed to have a time,
+X, Y, and Z column along with either a time or freq column.
+
+Two related functions are included, with one calculating spectral
+signature by taking the modulus of the Fourier coefficients of the
+signal and one plot function and one plotting UKBiobank Accelerometry
+Data.
 
 ## Installation
 
@@ -19,39 +30,3 @@ You can install the development version of bis620.2022 from
 # install.packages("devtools")
 devtools::install_github("bluestme/bis620.2022")
 ```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(bis620.2022)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
