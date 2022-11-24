@@ -20,6 +20,6 @@ test_that(
   {
     data(ukb_accel)
     p <- accel_plot(ukb_accel[1:100, ])
-    vdiffr::expect_doppelganger("first-100-samples", p)
+    expect_doppelganger("first-100-samples", p)
   }
 )

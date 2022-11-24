@@ -11,8 +11,6 @@
 #' data(ukb_accel)
 #' accel_plot(ukb_accel[1:1000,])
 #' @export
-
-library(ggplot2)
 accel_plot <- function(x) {
   if ("time" %in% colnames(x)) {
     col <- as.symbol("time")
@@ -23,7 +21,7 @@ accel_plot <- function(x) {
   }
   x |>
     pivot_longer(-all_of(col)) |>
-    ggplot(aes(x <- {{col}}, y = value)) +
+    ggplot(ggplot2::aes(x = {{col}}, y = value)) +
     geom_line() +
     facet_grid(name ~ .)
 }
